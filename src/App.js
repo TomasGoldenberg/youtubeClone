@@ -14,7 +14,7 @@ class App extends React.Component{
     }
 
     handleSubmit= async (searchTerm)=>{
-        const response = await youtube.get("search",{
+        const response = await youtube.get("search",{ //with the youtube .get is an axios.create where we write the base url of youtube and the "search " is the param un the url youtube uses before de id of each video
         params:{
             part:"snippet",
             maxResults:5,
