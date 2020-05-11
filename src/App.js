@@ -2,6 +2,8 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import {SearchBar, VideoList , VideoDetail} from "./components"
 import youtube from "./api/youtube";
+import key from "./key"
+
 class App extends React.Component{
     state={
         videos:[],
@@ -18,7 +20,7 @@ class App extends React.Component{
         params:{
             part:"snippet",
             maxResults:5,
-            key:"AIzaSyDrM5AlslAsWQlhGpgRndE98WKFrzuQR0o", //youtube api key 
+            key:key, //youtube api key 
             q: searchTerm
         }})
        
